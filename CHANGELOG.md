@@ -8,6 +8,7 @@ and are noted with a `!` in the message.
 
 ## Changes
 
+- feat(build): target build support for aarch64 darwin flaked systems 2024-05-26
 - feat: configure the nur packages template with replaced boilerplate 2024-05-26
 
 [calver]: https://calver.org
