@@ -5,5 +5,5 @@
   modules = import ./modules;
   overlays = import ./overlays;
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
+  zsh-wd = pkgs.callPackage ./pkgs/zsh-wd { };
 }
