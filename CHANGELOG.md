@@ -8,6 +8,7 @@ and are noted with a `!` in the message.
 
 ## Changes
 
+- ci(fix): set the github access token as input to the cachix install 2024-06-01
 - build(ci): remove support of deprecated releases and track unstable 2024-06-01
 - docs: direct link to the action job that builds and populates cache 2024-06-01
 - docs: write references from recent learnings for future maintenance 2024-05-29
