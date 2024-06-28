@@ -1,5 +1,6 @@
 name: "Build and populate cache"
 on:
+  pull_request:
   push:
     branches:
       - main
@@ -17,6 +18,7 @@ jobs:
       - name: Show nixpkgs version
         run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
       - name: Setup cachix caches
+        if: github.event_name != 'pull_request'
         uses: cachix/cachix-action@v15
         with:
           name: zimeg
