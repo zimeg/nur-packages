@@ -16,15 +16,42 @@ Compiled binaries and built results can be downloaded using cache:
 $ cachix use zimeg
 ```
 
+### ❄️ nur-packages.{#flakes}
+
+Custom packages can be added to flakes using custom package input:
+
+```nix
+{
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    zimeg.url = "github:zimeg/nur-packages";
+  };
+  outputs = { nixpkgs, flake-utils, zimeg, ... }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+        };
+      in
+      {
+        devShell = pkgs.mkShell {
+          buildInputs = [
+            zimeg.packages.${pkgs.system}.etime
+          ];
+        };
+      });
+}
+```
+
 ### 🏠 nur-packages.{#home-manager}
 
 Custom paths can change packaged contents in various combinations:
 
 ```nix
 { config, pkgs, ... }:
-
 let
-  zimpkgs = import (builtins.fetchTarball "https://github.com/zimeg/nur-packages/archive/main.tar.gz") {};
+  zimeg = import (builtins.fetchTarball "https://github.com/zimeg/nur-packages/archive/main.tar.gz") {};
 in
 {
   programs.home-manager.enable = true;
@@ -34,7 +61,7 @@ in
     plugins = [
       {
         name = "wd";
-        src = zimpkgs.zsh-wd;
+        src = zimeg.zsh-wd;
         file = "share/wd/wd.plugin.zsh";
         completions = [ "share/zsh/site-functions" ];
       }
