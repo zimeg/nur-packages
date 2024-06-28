@@ -8,6 +8,14 @@
 
 Contained contents can be included in other expressions using a package import.
 
+### 🗄️ nur-packages.{#cachix}
+
+Compiled binaries and built results can be downloaded using cache:
+
+```sh
+$ cachix use zimeg
+```
+
 ### 🏠 nur-packages.{#home-manager}
 
 Custom paths can change packaged contents in various combinations:
