@@ -1,6 +1,7 @@
-{ lib
-, fetchFromGitHub
-, vimUtils
+{
+  lib,
+  fetchFromGitHub,
+  vimUtils,
 }:
 
 vimUtils.buildVimPlugin rec {
