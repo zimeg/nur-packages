@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/anchore/quill/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     maintainers = [ ];
+    mainPrograms = "quill";
   };
 })
