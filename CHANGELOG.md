@@ -8,6 +8,7 @@ and are noted with a `!` in the message.
 
 ## Changes
 
+- fix(gon): remove additional build flags for go compilation linkings 2026-12-09
 - deps(ci): revert to nix installation matching this package template 2026-12-09
 - build(ci): practice best recommendations of permission and versions 2025-08-10
 - feat(pkgs/quill): package notarization software matching goreleaser 2025-08-09
