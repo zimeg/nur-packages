@@ -11,8 +11,8 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "zimeg";
     repo = "recon";
-    rev = "f332e4ab350ca5371d0ae2703f9cb6b37f72d5aa";
-    hash = "sha256-r21Wzh14lE/W5ezQoy7zKcoAX+M7tch7+6sOxNVlIZs=";
+    rev = "e92e62aa3ad5f7901342cbdd87e429bb59e9fa4d";
+    hash = "sha256-SRkwhH7FI8fBn16i5tZiLrM7xHw/53HfTQMU6rm+mGQ=";
   };
 
   cargoLock = {
