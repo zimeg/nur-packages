@@ -6,7 +6,7 @@
 
 rustPlatform.buildRustPackage {
   pname = "recon";
-  version = "0.6.1-unstable-2026-06-24"; # https://github.com/zimeg/recon/tree/feat/detect-claude-wrapped
+  version = "0.6.1-unstable-2026-06-25"; # https://github.com/zimeg/recon/tree/feat/detect-claude-wrapped
 
   src = fetchFromGitHub {
     owner = "zimeg";
